@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejoindre - CIT Club</title>
+    <link rel="stylesheet" href="../css-files/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">
+            <img src="../assets/images/logo.webp" alt="CIT Club Logo">
+            <h2>CIT CLUB</h2>
+        </div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="activities.html">Activités</a>
+            <a href="events.html">Événements</a>
+            <a href="register.html">Rejoindre</a>
+        </nav>
+    </header>
+
+    <!-- Registration Section -->
+    <section class="registration">
+        <div class="reg-container">
+            <h1>Rejoindre CIT Club</h1>
+            <p>Inscription rapide et facile pour devenir membre</p>
+
+            <form id="registerForm" class="reg-form">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required
+                        placeholder="Votre nom"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required
+                        placeholder="votre.email@example.com"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required
+                        placeholder="Au moins 6 caractères"
+                        minlength="6"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmer le mot de passe</label>
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        name="confirmPassword" 
+                        required
+                        placeholder="Confirmez votre mot de passe"
+                        minlength="6"
+                    >
+                </div>
+
+                <button type="submit" class="submit-btn">S'inscrire</button>
+            </form>
+
+            <div id="message" class="message"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 CIT Club. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js-files/register.js"></script>
+</body>
+</html>
+    </section>
+
+<footer>
+    <p>© 2026 CIT Club - INPT</p>
+</footer>
+
+</body>
+</html>
