@@ -114,8 +114,8 @@ Enregistre un nouvel utilisateur
 **Request Body:**
 ```json
 {
-  "name": "John Doe",
-  "email": "john@example.com",
+  "name": "layla chmourk",
+  "email": "chmourklayla@example.com",
   "password": "password123"
 }
 ```
@@ -126,8 +126,8 @@ Enregistre un nouvel utilisateur
   "message": "User registered successfully",
   "user": {
     "id": 1,
-    "name": "John Doe",
-    "email": "john@example.com",
+    "name": "layla chmourk",
+    "email": "chmourklayla@example.com",
     "createdAt": "2026-05-08T10:30:00Z"
   }
 }
