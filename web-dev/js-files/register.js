@@ -2,15 +2,30 @@
 document.getElementById("registerForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
     const email = document.getElementById("email").value.trim();
+    const filiere = document.getElementById("filiere").value.trim();
+    const level = document.getElementById("level").value.trim();
+    const phone = document.getElementById("phone").value.trim();
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
+    const terms = document.getElementById("terms").checked;
     const messageDiv = document.getElementById("message");
 
+    // Récupérer les intérêts sélectionnés
+    const interestCheckboxes = document.querySelectorAll('input[name="interests"]:checked');
+    const interests = Array.from(interestCheckboxes).map(cb => cb.value);
+
     // Validation
-    if (!name || !email || !password) {
-        messageDiv.textContent = "Tous les champs sont obligatoires";
+    if (!firstName || !lastName || !email || !filiere || !level || !password) {
+        messageDiv.textContent = "Tous les champs obligatoires doivent être remplis";
+        messageDiv.className = "message error";
+        return;
+    }
+
+    if (!terms) {
+        messageDiv.textContent = "Vous devez accepter les conditions d'utilisation";
         messageDiv.className = "message error";
         return;
     }
@@ -39,8 +54,13 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name,
+                firstName,
+                lastName,
                 email,
+                filiere,
+                level,
+                interests,
+                phone: phone || null,
                 password
             })
         });
@@ -48,7 +68,7 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
         const data = await response.json();
 
         if (response.ok) {
-            messageDiv.textContent = "✓ Inscription réussie! Bienvenue dans CIT Club!";
+            messageDiv.textContent = "✓ " + data.message;
             messageDiv.className = "message success";
             document.getElementById("registerForm").reset();
             

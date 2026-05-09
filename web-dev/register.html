@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css-files/index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header>
+            <div class="logo">
+                <img src="assets/images/logo.webp" alt="CIT Club Logo">
+                <h2>CIT CLUB</h2>
+            </div>
+
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="about.html">À propos</a>
+                <a href="activities.html">Activités</a>
+                <a href="events.html">Événements</a>
+                <a href="register.html">Rejoindre</a>
+            </nav>
+        </header>
+
+        <!-- Registration Section -->
+        <section class="registration">
+            <div class="reg-container">
+                <h1>Rejoindre CIT Club</h1>
+                <p>Inscription pour devenir membre du Club IT</p>
+
+                <form id="registerForm" class="reg-form">
+                    <!-- Informations Personnelles -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Prénom</label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                required
+                                placeholder="Votre prénom"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Nom</label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName" 
+                                required
+                                placeholder="Votre nom"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            placeholder="votre.email@inpt.ma ou votre.email@example.com"
+                        >
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="filiere">Filière</label>
+                            <input 
+                                type="text" 
+                                id="filiere" 
+                                name="filiere" 
+                                required
+                                placeholder="Ex: GI, SIR, etc."
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="level">Niveau d'études</label>
+                            <select id="level" name="level" required>
+                                <option value="">Sélectionnez votre niveau</option>
+                                <option value="1A">1ère Année</option>
+                                <option value="2A">2ème Année</option>
+                                <option value="3A">3ème Année</option>
+                                <option value="Master">Master</option>
+                                <option value="Doctorat">Doctorat</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interests">Domaines d'intérêt</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox">
+                                <input type="checkbox" name="interests" value="Web">
+                                Développement Web
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="interests" value="Cyber">
+                                Cybersécurité
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="interests" value="DataScience">
+                                Data Science
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="interests" value="DevOps">
+                                DevOps
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="interests" value="Algo">
+                                Algorithmique
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Numéro de téléphone</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="+212 6XX XXX XXX"
+                        >
+                    </div>
+
+                    <!-- Identifiants -->
+                    <hr class="form-divider">
+                    <h3>Identifiants de connexion</h3>
+
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            required
+                            placeholder="Au moins 6 caractères"
+                            minlength="6"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirmer le mot de passe</label>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            required
+                            placeholder="Confirmez votre mot de passe"
+                            minlength="6"
+                        >
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <label>
+                            <input type="checkbox" id="terms" name="terms" required>
+                            J'accepte les conditions d'utilisation
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">S'inscrire</button>
+                </form>
+
+                <div id="message" class="message"></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 CIT Club. Tous droits réservés. LAYLA CHMOURK</p>
+        </footer>
+
+        <script src="js-files/register.js"></script>
+    </body>
+</html>
+
+</body>
+</html>

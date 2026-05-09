@@ -19,7 +19,7 @@ app.use("/api/users", userRoutes);
 
 // Root route
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../web-dev/html-files/index.html"));
+    res.sendFile(path.join(__dirname, "../web-dev/index.html"));
 });
 
 // Error handling middleware
@@ -33,6 +33,7 @@ const PORT = process.env.PORT || 3000;
 
 db.sync()
     .then(() => {
+        console.log("Database synchronized successfully");
         app.listen(PORT, () => {
             console.log(`Server running on http://localhost:${PORT}`);
         });

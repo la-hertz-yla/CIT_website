@@ -3,7 +3,14 @@ const db = require("../database/connection");
 const bcrypt = require("bcrypt");
 
 const User = db.define("User", {
-    name: {
+    firstName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true
+        }
+    },
+    lastName: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -17,6 +24,23 @@ const User = db.define("User", {
         validate: {
             isEmail: true
         }
+    },
+    filiere: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    level: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    interests: {
+        type: DataTypes.JSON,
+        defaultValue: [],
+        allowNull: true
+    },
+    phone: {
+        type: DataTypes.STRING,
+        allowNull: true
     },
     password: {
         type: DataTypes.STRING,
